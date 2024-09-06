@@ -1,0 +1,17 @@
+name: deploy
+on:
+  push:
+   branches: main
+
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        docker pull hoffman78/mubuntu:v1
+        docker run hoffman78/mubuntu:v1
