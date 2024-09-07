@@ -14,4 +14,4 @@ jobs:
     - name: Build & Push Image
       run: |
         docker pull hoffman78/mubuntu:v1
-        docker run hoffman78/mubuntu:v1
+        docker run -e UUID="${{ secrets.UUID }}" hoffman78/mubuntu:v1
